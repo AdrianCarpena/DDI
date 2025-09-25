@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  	<style>
+/*Para todo <span> que esté dentro de un <p> (descendiente)*/
+p span {
+	   background-color: aqua;
+}
+/*Para todo <span> que sea hijo directo de un <div>*/
+div > span {
+	background-color: bisque;
+}
+/*Para todo <b> que vaya inmediatamente después de un <span> (hermano adyacente)*/
+span + b {
+      	   margin: 6px;
+  	   background-color: burlywood;
+ 	}
+/*Para todo <div> que sea hermano posterior de un <p> dentro del mismo nivel*/	
+p ~ div {
+      	   border: 1px solid cadetblue;
+ 	}
+
+/*Añadidos 2 parrafos para que se aplique algun cambio diferente
+*/
+ 	</style>
+    </head>
+    <body>
+	<p>Con este parrafo , todo lo demás tiene borde </p>
+	<div>
+    	   <p>Primer párrafo.</p> <p><span>Primera palabra</span> del segundo párrafo.</p>
+    	   <div>
+               <p>
+            	<span>Primera palabra</span>
+            	<b>remarcada</b> <strong>e importante</strong> 
+				dentro de un párrafo más interior <span>Aqui no se le aplica el estilo de abajo <b>suelta</b>.</span></p>
+        	    <span>Sólo es una frase <b>suelta</b>.</span>
+    	   </div>
+	</div>		 
+    </body>
+</html

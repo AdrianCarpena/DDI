@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Clases en HTML</title>
+  <style>
+body{
+    background-color: rgb(82, 49, 143);
+}
+.red{
+color: red;
+}
+.bold{
+font-weight: bold;
+}
+.grande{
+  font-size: 2em;
+}
+.confondo{
+  background-color: blue;
+}
+.contenedor{
+  width: 60%;
+  height: 70%;
+  border: 2px solid red;
+  margin: 30px auto
+}
+
+/*
+Agregados 2 estilos más y aplicados en 2 elementos
+También puesto todo en un div clase contenedor con estilos*/
+  </style>
+</head>
+<body>
+<div class="contenedor">
+  <h2 class="red bold">
+    Este título combina los estilos aplicados de la clase "red"
+    y "bold".
+  </h2>
+  <p>A este párrafo no se le ha aplicado ninguna clase.</p>
+  <p class="red confondo">Pero a este sí</p>
+  <div class="bold">Y a este div también</div>
+  <p class="bold grande confondo">Este parrafo tiene más estilos</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<style>
+    	[selected] {color: chartreuse;}
+    	[disabled] {background-color: lightslategray;}
+    	[name="provincia"] {font-family: cursive;}
+    	[placeholder~="su"] {border: 2px solid red;}
+    	[name|="opt"] {font-style: oblique;}
+    	[name^="opt"] {font-weight: bolder;}
+    	[name$="ado"] {background-color: gainsboro;}   
+    	[type*="ex"] {background-color: antiquewhite; margin: 3px;}
+    	
+		/*Al poner "tu nombre" en lugar de "su nombre" no se aplica el estilo.
+		He puesto otro boton en construcción pero con diferente nombre para que se aplique tambien el estilo [name^="opt"]
+		*/
+		</style>
+	</head>
+	<body>
+    		<form action="#" method="get">
+        		<fieldset>
+            	<legend>Dirección:</legend>
+            	<label for="nombre">Introduzca su nombre:</label>
+            	<input type="text" name="nombre" placeholder="Aquí tu nombre..."/>
+            	<br/>
+            	<label for="apellido">Introduzca su apellido:</label>
+            	<input type="text" name="apellido" placeholder="Aquí su apellido..."/>
+            	<br/>
+            	<label for="pais">País:</label>
+            	<select name="pais" id="pais">
+                	<option value="ES" name="opt-pais1" selected>España</option>
+                	<option value="PT" name="opt-pais2">Portugal</option>
+                	<option value="AN" name="opt-pais3">Andorra</option>
+                	<option value="FR" name="opt-pais4">Francia</option>
+                	<option value="AT" name="opt-pais5" disabled>Atlantida</option>
+            	</select>
+                <label for="provincia">Provincia:</label>
+            	<select name="provincia" id="provincia">
+                	<option value="MAD" name="optProv1" selected>Madrid</option>
+                	<option value="BCN" name="optProv2">Barcelona</option>
+                	<option value="VAL" name="optProv3">Valencia</option>
+                	<option value="SEV" name="optProv4">Sevilla</option>
+            	</select>
+            	<br/>
+            	<input type="button" name="btnDeshabilitado" value="En construcción" disabled>
+            	<br/>
+            	<input type="button" name="optDeshabilitado" value="En construcción" disabled>
+            	<br/>
+            	<input type="reset" value="Limpiar" name="btn-limpiar"/>
+            	<br/>
+            	<input type="submit" value="Enviar" name="btn-enviar"/>
+        		</fieldset>
+    		</form>       	 
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Aplico este estilo a elementos de ambas clases "resaltado" y "subrayado" */
+    .resaltado.subrayado {
+      color: red;
+      text-decoration: underline;
+    }
+    /* Aplico este estilo a los párrafos de la clase "resaltado" */
+    p.resaltado {
+      font-weight: bold;
+    }
+    /* Aplico este estilo a elementos de clase "resaltado" que estén dentro de elementos de clase "contenedor" */
+    .contenedor .resaltado {
+      background: lightyellow;
+    }
+    /* Aplico este estilo al elementos de clase "especial" que aparecen
+    justo después de un elemento de clase "resaltado"*/
+    .resaltado + .especial {
+      padding: 5px;
+      border-style: dashed;
+      border-color: aqua;
+    }
+
+    /* Puesto el texto especial en el p para que no le aplique el estilo
+    He cambiado donde acaba el div para que el resaltado afecte también al segundo parrafo
+    */
+  </style>
+</head>
+<body>
+  <p class="resaltado">Párrafo resaltado.</p> <p class="resaltado subrayado">Párrafo resaltado y subrayado</p>
+  <div class="contenedor">
+    <p class="resaltado">Resaltado dentro de contenedor</p>
+  
+  <p class="resaltado">Este párrafo contiene resaltado <span class="especial"> Y este texto sin clase especial</span> </p><span class="especial"> Y este texto con clase especial</span>
+</div>
+</body>
+</html>
+

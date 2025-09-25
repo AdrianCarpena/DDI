@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="https://www.w3schools.com/" target="_blank"/>
+	<style>
+    	a {
+        	margin: 4px; padding: 3px; border: 2px solid;
+    	}
+    	button {
+        	margin: 5px;
+    	}
+    	a:link {
+        	border-color: grey; background-color: silver; color: grey;
+    	}
+    	a:hover {
+        	border-color: lightyellow; background-color: darkgrey; color: lightyellow;
+    	}
+    	a:active {
+        	border-color: beige; background-color: dimgrey; color: beige;
+    	}
+    	a:visited {
+        	color: bisque;
+    	}
+    	input:disabled {
+        	background-color: #dddddd;
+    	}
+    	input:enabled {
+        	background-color:aliceblue;
+    	}
+    	input:checked {
+        	width: 20px; height: 20px;
+    	}
+		input:enabled:hover{
+			background-color: red;
+		}
+		button:hover{
+			scale: 130%;
+		}
+		/*Agregado un selector para cuando el campo está habilitado y se tiene el raton sobre él. Tambiém selecotor al hacer hover en el botón, lo agranda
+		Nuevo botón al que se le aplican los estilos que le corresponden*/
+	</style>
+	<script>
+    	function habilitarDeshabilitar(){
+        	   element = document.querySelector("input[type='text']");
+        	   if (element.disabled) {
+            	element.removeAttribute("disabled");
+            	document.getElementsByTagName("button")[0].innerHTML = "Deshabilitar";
+        	   } else {
+            	element.setAttribute('disabled', '');
+            	document.getElementsByTagName("button")[0].innerHTML = "Habilitar";
+        	   }
+    	}
+	</script>
+</head>
+<body>
+	<input type="text" placeholder="Pon algo..." disabled/>
+	<input type="checkbox" name="checkbox">
+	<label for="checkbox">Selecionar</label>
+	<br/><br/>  
+	<nav>
+    	<a href="/html/">HTML</a> |
+    	<a href="/css/">CSS</a> |
+    	<a href="/js/">JavaScript</a> |
+    	<a href="/python/">Python</a>
+	</nav>
+	<button onclick="habilitarDeshabilitar()">Habilitar</button>
+	<button>Habilitado</button>
+</body>
+</html>
+
+
