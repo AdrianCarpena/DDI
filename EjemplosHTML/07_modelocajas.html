@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body {
+	margin: 50px;
+	padding: 25px;
+	border: 2px dashed lightgray;
+}
+div {
+	border: 2px dashed lightsalmon;
+	margin: 50px;
+	padding: 25px;
+	display: block;
+}
+.caja {
+	border: 3px solid olive;
+	background-color: azure;
+	padding: 20px;
+	margin: 20px;
+	width: 270px;
+	height: 100px;
+}
+.alternativo {
+	box-sizing: border-box;
+}
+.contenido {
+	margin-top: -15px;
+	margin-right: -10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	background-color: antiquewhite;
+}
+#primero {
+	margin-bottom: 25px;
+}
+#segundo {
+	margin-top: 10px;
+}
+.visual {
+	width: 50px;
+	height: 25px;
+	display: inline-block;
+}
+
+	</style>
+</head>
+<body>
+    <div id="principal">
+    	<h1>Título principal</h1>
+    	<h2>Título secundario</h2>
+    	<p>Este párrafo contiene varios elementos en <span>línea</span> intercalados para poder distinguir como se <em>visualizan</em> y así poder <strong>ejemplificarlo</strong>.</p>
+    	<div class="caja">Esta caja hace uso del <em>modelo estándar</em>.</div>
+    	<div class="caja alternativo">Esta caja hace uso del <em>modelo alternativo</em>.</div>
+    	<div class="contenedor">
+        	<div class="contenido">Esta caja aplica un margen para superponerse a su contenedor.</div>
+    	</div>
+    	<div class="contenedor">
+        	<p id="primero">El margen inferior de este párrafo se va a combinar con el margen superior del siguiente.</p>
+        	<p id="segundo">El margen superior de este párrafo se va a combinar con el margen inferior del anterior.</p>
+    	</div>
+    	<p>En este párrafo tenemos un <span class="caja">span</span> que como es un elemento en línea, no respetaeno de un <span class="caja visual">span</span> pueden tapar partes próximas, aplicamos la propiedad <code>display:inline-block</code> el ancho y largo, pero su margen y relleno pueden tapar partes próximas.</p>
+    	<p>Para evitar que el margen y rell.</p>
+    </div>
+</body>
+</html>

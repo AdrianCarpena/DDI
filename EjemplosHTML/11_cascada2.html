@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@scope en CSS</title>
+  <style>
+    /* Estilo general */
+    h2 {
+      color: blue;
+    }
+
+    /* Scoped: solo aplica dentro de .articulo */
+    @scope (section) {
+      h2 {
+        color: crimson;
+      }
+      p {
+        font-style: italic;
+      }
+
+      /*Si pongo section en lugar de .articulo funciona igual englobando los elemetos.Puse un h3 que aunque está dentro del
+      section no se le aplica estilo ya que no hay uno definido para h3.*/
+    }
+  </style>
+</head>
+<body>
+  <h2>Este h2 es azul (regla global)</h2>
+
+  <section class="articulo">
+    <h2>Este h2 es rojo (scope)</h2>
+    <p>Párrafo en cursiva solo dentro del scope.</p>
+    <h3>Este no se aplica</h3>
+  </div>
+  </section>
+  <h2>Este h2 vuelve a ser azul</h2>
+</body>
+</html>

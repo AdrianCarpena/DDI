@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <style>
+            ul > li {
+            display: inline;
+            list-style-type: none;
+            text-align: center;
+            padding: 10px;
+            background-color: #0A0;
+        }
+        a {
+            text-decoration: none;
+            color:aliceblue;
+        }
+        li:hover {
+            background-color: #A00;
+        }
+        #contenedor {
+            border: 2px dashed gray;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+        div div {
+            border: 1px dotted lightgray;
+            display: inline-block;
+            width: 25%;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 240px;
+        }
+        </style>	
+        <script>
+            function quitarElemento(){
+                    document.getElementById("cajaImagen1").style.display="none";
+            }
+            function ocultarElemento(){
+                    document.querySelector("#cajaImagen2").style.visibility="hidden";
+            }
+            function restablecerElementos() {
+                    document.querySelector("#cajaImagen1").style.display="inline-block";
+                    document.querySelector("#cajaImagen2").style.visibility="visible";
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+    	<h3>Mostramos una lista de enlaces como un menú horizontal</h3>
+    	<ul>
+        	<li><a href="#">Opción 1</a></li>
+        	<li><a href="#">Opción 2</a></li>
+        	<li><a href="#">Opción 3</a></li>
+    	</ul>
+        </nav>
+        <div id="contenedor">
+    	    <div id="cajaImagen1">
+        	    <p><code>display:none</code></p>
+        	    <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Italia">
+        	    <br>
+        	    <button onclick="quitarElemento()">Quitar</button>
+    	    </div>
+    	    <div id="cajaImagen2">
+        	    <p><code>visibility:hidden</code></p>
+        	    <img src="https://www.w3schools.com/css/img_forest.jpg" alt="Bosque">
+        	    <br>
+        	    <button onclick="ocultarElemento()">Ocultar</button>
+    	    </div>
+    	    <div id="cajaImagen3">
+        	    <p>Reset</p>
+        	    <img src="https://www.w3schools.com/css/img_lights.jpg" alt="Boreal">
+        	    <br>
+        	    <button onclick="restablecerElementos()">Restablecer</button>
+    	    </div>
+        </div>
+    </body>
+</html>

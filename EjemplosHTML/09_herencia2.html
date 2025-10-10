@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  color: blueviolet;
+  border: 1px dashed gray
+}
+.caja {
+  width: 200px;
+  height: 100px;
+  border: unset;  /* Elimina la regla definida: equivale a 'initial' si no es heredable */
+  padding: 20px;
+  margin: 20px;
+}
+p {
+  color: inherit;    /* Fuerza a heredar el color del padre (body o contenedor) */
+}
+section { 
+    border: inherit;
+}
+article {
+    border: inherit; 
+}
+span {
+  color: inherit;   /* Vuelve al valor inicial por defecto del navegador (normalmente negro) */
+}
+/* Poniendo color : inherit en span hereda de elementos que acaban heredando de 
+body, por lo tanto acaba heredando el color de body. En section aunque quite
+el color inherit sigue siendo morado el span, ya que el color se hereda automaticamente.
+
+*/
+
+  </style>
+</head>
+<body>
+    <h2>Noticias</h2>
+    <section>
+     <article class="caja">
+      <p>Este es el contenido de la noticia 1.</p>
+    </article>
+    <article>
+      <p>Este es <span>el contenido de </span> la noticia 2.</p>
+    </article>
+  </section>
+</body>
+</html>
+

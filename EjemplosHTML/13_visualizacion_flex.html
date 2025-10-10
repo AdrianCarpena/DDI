@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="estiloFlexBox.css">
+	<script src="flexBox.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+    	<div class="elemento e1" onclick="modificar(this)">1</div>
+    	<div class="elemento e2" onclick="modificar(this)">2</div>
+    	<div class="elemento e3" onclick="modificar(this)">3</div>
+    	<div class="elemento e4" onclick="modificar(this)">4</div>
+    </div>
+    <div id="propCont">
+    	<fieldset>
+        	<legend>Propiedades contenedor:</legend>
+        	<label for="camFDir"><code>flex-direction:</code></label>
+        	<button id="camFDir" onclick="cambiarFlexDirection()">row</button>
+        	<br><br>
+        	<label for="camFWr"><code>flex-wrap:</code></label>
+        	<button id="camFWr" onclick="cambiarFlexWrap()">nowrap</button>
+        	<br><br>
+        	<label for="camJCnt"><code>justify-content:</code></label>
+        	<button id="camJCnt" onclick="cambiarJustifyContent()">flex-start</button>
+        	<br><br>
+        	<label for="camAIt"><code>align-items:</code></label>
+        	<button id="camAIt" onclick="cambiarAlignItems()">flex-start</button>
+        	<br><br>
+        	<label for="camAC"><code>align-content:</code></label>
+        	<button id="camAC" onclick="cambiarAlignContent()" disabled>flex-start</button>
+        	<br><br>
+    	</fieldset>
+    </div>
+</body>
+</html>

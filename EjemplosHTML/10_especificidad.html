@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Especificidad en CSS</title>
+  <style>
+    /* Selector de etiqueta */
+    div {
+      background: lightgray;
+      color: black;
+      padding: 10px;
+    }
+
+    /* Selector de clase */
+    .container {
+      background: lightblue ;
+    }
+
+    /* Selector de id */
+    #element {
+      background: lightgreen !important;
+    }
+
+    /* Selector combinado */
+    section .container{
+      background: yellow;
+    }
+
+    /* Con !important */
+    .forzado {
+      background: orange;
+    }
+    /*Al cambiar donde esta el important gana prioridad sobre cualquier otra cosa
+    asi que todo lo que tenga un id element sera verde independientemente de
+    si tiene mas selectores.
+    */
+  </style>
+</head>
+<body>
+  <h2>Ejemplo de especificidad</h2>
+
+  <div class="container" id="element">
+    Soy un div con <strong>id="element"</strong>
+    y <strong>class="container"</strong>
+  </div>
+
+  <section>
+    <p class="container">Soy un párrafo con class="container"
+        dentro de una section</p>
+  </section>
+
+  <div class="container forzado" id="element" style="background: pink; ">
+    Tengo de todo: <br>
+    - selector de etiqueta (div)<br>
+    - clase (container)<br>
+    - id (element)<br>
+    - estilo inline (background: pink)<br>
+    - clase con !important (forzado)
+  </div>
+</body>
+</html>

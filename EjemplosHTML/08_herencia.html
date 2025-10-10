@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <style>
+   
+body {
+  font-family: Arial, sans-serif;
+  color: blueviolet;
+  border: 1px dashed gray
+}
+
+.caja {
+  width: 200px;
+  height: 100px;
+  border: inherit; /* Elimina la regla definida: equivale a 'initial' si no es heredable */
+  padding: 20px;
+  margin: 20px;
+}
+h2 {
+  color: inherit;   /* Fuerza a heredar el color del padre (body o contenedor) */
+}
+
+p {
+  color: inherit;   /* Vuelve al valor inicial por defecto del navegador (normalmente negro) */
+}
+/*En la linea 17, el borde no se hereda debido a que no son heredables
+Si en p color pongo inherit en lugar de initial hereda el color del padre,
+con initial se le diría que use el por defecto, que es el negro.
+*/
+
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Noticias</h2>
+    <article class="caja">
+      <p>Este es el contenido de la noticia 1.</p>
+    </article>
+    <article class="caja">
+      <p>Este es el contenido de la noticia 2.</p>
+    </article>
+  </section>
+</body>
+</html>
+
