@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .contenedor {    /* Contenedor principal con Grid */
+    display: grid;
+    grid-template-areas:
+      "header header"                       /* Fila 1: cabecera ocupa dos columnas */
+      "sidebar main"                        /* Fila 2: barra lateral + contenido */
+      "sidebar main"
+      "footer footer";                      /* Fila 3: pie ocupa todo el ancho */
+    grid-template-columns: 200px 1fr;       /* Dos columnas: fija + flexible */
+    grid-template-rows: 80px 1fr 1fr 60px;      /* Alturas de filas, fr es flexible */
+    height: 100vh;                          /* Altura total de la ventana */
+  }
+    /* Cada área toma su posición mediante el nombre asignado */
+  header { 
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+ }
+aside  { 
+    grid-area: sidebar;
+    background: #ecf0f1; 
+    padding: 10px;
+    grid-row: 2/4;
+}
+button{
+    width: 170px;
+    height: 40%;
+    margin-top: 20%;
+}
+main {
+  grid-area:main;
+  margin: 25px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.img1, .img2, .img3, .img4 {
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img {
+  width: 100%;
+  height: 100%;
+}
+  footer { 
+    grid-area: footer; 
+    background: #2c3e50; 
+    color: white; 
+    text-align: 
+    center; 
+    line-height: 60px; 
+}
+
