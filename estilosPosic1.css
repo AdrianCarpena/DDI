@@ -1,0 +1,85 @@
+/*Aplicamos border-box a todos los elementos del documento*/
+* {
+	margin: 10px; /*Separación exterior e interior iguales y uniformes con margin y padding*/
+	padding: 10px;
+	box-sizing: border-box; /*Visto en el modelo de cajas, conseguimos que el tamaño total incluya el padding y el borde (más fácil de controlar)*/
+}
+
+/*Aplicamos un estilo de texto para todos los div*/
+div {
+	font-size: 1.5rem;
+	text-align: center;
+	color:aliceblue;
+	font-family: monospace;
+	font-weight: bolder;
+}
+/*POSITION FIXED para header y footer*/
+header, footer {
+	border: 4px dashed gray;
+	position: fixed; /*Con esto conseguiremos que header y footer permanezcan en la ventana del navegador al hacer scroll*/
+}
+header {
+	top: 5px;
+	left: 5px; /*con top y left anclamos header en la esquina superior izquierda*/
+}
+footer {
+	bottom: 5px;
+	right: 5px; /*con bottom y right anclamos footer en la esquina inferior derecha*/
+	height: 10%;
+	width: 90%;
+	text-align: center;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+}
+/*Aplicamos POSITION RELATIVE a los contenedores, para que sean referencia de los elementos hijos que tengan POSITION ABSOLUTE*/
+.contenedor {
+	border: 3px dotted lightgray;
+	display: flex;
+	flex-flow: column wrap; /*con display:flex y flex-flow:row wrap distribuimos los elementos de forma fluida (no desbordan el espacio)*/
+	height: 350px;
+	margin-top: 10%;
+}
+/*Estilos para los elementos Hijos (cajas)*/
+div > div {
+	width: 150px;
+	height: 150px;
+	line-height: 75px;
+}
+
+.estatico {
+	position: static; /*valor por defecto de todos los elementos. No responde a propiedades de posicionamiento (top, left, etc.)*/
+	background-color: #070;
+}
+.relativo {
+	position: relative;
+	background-color: #722;
+	bottom: 10px;
+	right: 15px;
+    /*Las cajas de esta clase mantiene el espacio original pero desplazado 50 px hacia abajo y otros 50 px a la derecha.*/
+    /*Relative --> Los hijos de esta caja con absolute se posicionarían respecto a él.*/
+}
+.absoluto {
+	position: absolute;
+	background-color: #333;
+	top: 90px;
+	left: 25px;
+    /*absolute saca el elemento del flujo normal, como si flotara encima de los demás. */
+    /*bottom:10px; y left:10px; se calculan respecto al ".contenedor" porque tiene position: relative.*/
+}
+.estatico + .absoluto {
+	bottom: 20px;
+	left: 85%;
+    /*Aplica estilo al .absoluto que va justo después de un .estatico en el HTML*/
+    /*Las cajas "absoluto segundo" se colocará en la esquina inferior derecha del contenedor.*/
+}
+
+.sticky {
+	position: sticky;
+	background-color: #229;
+	height: 100px;
+	width: 300px;
+	top: 25%;
+}
+    /*stycky es una mezcla entre relative y fixed. Al principio se comporta como relative, pero al hacer scroll y su borde superior alcance top:25%, 
+    se queda fijo en la pantalla. Muy útil para menús laterales o cabeceras de secciones que deseamos tener visibles parcialmente*/
