@@ -1,0 +1,240 @@
+/* Ajusta el modelo de caja y define fuente general */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estructura principal del documento */
+body {
+  margin: 2em 5em;
+  width: 90vw;
+  min-height: 90vh; 
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header, main, footer */
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  overflow-x: hidden; /* evita desplazamiento horizontal */
+}
+
+/* Encabezado superior del sitio */
+header {
+  grid-area: header;
+  background-color: aqua;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  padding: 20px 0;
+}
+
+/* Contenedor principal del formulario */
+main {
+  grid-area: main;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0; /* espacio arriba y abajo respecto al header y al footer */
+  overflow: hidden;
+}
+
+/* Botón de menú principal dentro del área main */
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  background-color: cornflowerblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+/* Efecto al pasar el ratón por el botón */
+.menu:hover {
+  scale: 1.2;
+  background-color: dodgerblue;
+  transition: ease 1.5s;
+  transition-delay: 0.3s;
+}
+
+/* Enlace interno del botón */
+.menu > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilo del formulario principal */
+form {
+  border: 2px solid black;
+  padding: 2em;
+  width: 500px;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: white;
+}
+
+/* Contenedor para campos en la misma fila */
+.fila {
+  display: flex;
+  gap: 1em;
+}
+
+/* Campos de entrada del formulario */
+input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Contenedor de los botones inferiores */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+/* Botón "Cancelar" */
+.cancelar {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Efecto hover en el botón cancelar */
+.cancelar:hover {
+  scale: 1.2;
+  background-color: crimson;
+  transition: ease 1.5s;
+  transition-delay: 0.3s;
+}
+
+/* Botón "Adoptar" */
+.adoptar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Efecto hover en el botón adoptar */
+.adoptar:hover {
+  scale: 1.2;
+  background-color: limegreen;
+  transition: ease 1.5s;
+  transition-delay: 0.3s;
+}
+
+/* Pie de página fijo al final del cuerpo */
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  border-top: 2px solid black;
+  margin-top: auto;
+}
+
+/* Separación superior del bloque de iconos */
+.iconos {
+  margin-top: 10px;
+}
+
+/* Estilo general para los iconos del footer */
+footer img {
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/* Adaptación del diseño a móviles y tablets pequeñas */
+@media (max-width: 700px) {
+  /* Cuerpo con márgenes más pequeños */
+  body {
+    margin: 1em;
+    width: auto;
+    min-height: auto;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* Encabezado más compacto */
+  header {
+    font-size: 2.5em;
+    padding: 15px 0;
+  }
+
+  /* Distribución vertical en el contenido principal */
+  main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+
+  /* El botón del menú deja de ser fijo y se centra arriba del formulario */
+  .menu {
+    position: static;
+    margin-bottom: 1em;
+    align-self: center;
+  }
+
+  /* El formulario se adapta al ancho de la pantalla */
+  form {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5em;
+  }
+
+  /* Los campos de la fila pasan a ocupar toda la línea */
+  .fila {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+
+  /* Los botones se apilan verticalmente */
+  .botones {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Los botones ocupan todo el ancho disponible */
+  .cancelar,
+  .adoptar {
+    width: 100%;
+  }
+
+  /* Pie de página más pequeño y ajustado */
+  footer {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+
+  /* Iconos centrados y adaptados al tamaño móvil */
+  .iconos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+  }
+
+  /* Tamaño de los iconos reducidos en móviles */
+  footer img {
+    width: 35px;
+    margin: 0 8px;
+  }
+}

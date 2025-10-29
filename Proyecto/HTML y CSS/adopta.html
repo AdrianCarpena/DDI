@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Adopta</title>
+    <link rel="stylesheet" href="CSS/estilosAdopta.css">
+  </head>
+  <body>
+    <!-- Encabezado con el título principal del sitio -->
+     <header>ADOP-PET</header>
+
+     <main>
+      <!-- Contenedeor principal -->
+        <div class="contenedor-principal">
+          <!-- Botón que lleva de vuelta al menú principal -->
+          <button class="menu"><a href="Principal.html">Menú principal</a></button>
+
+          <!-- Carrusel de fotos con sus nombre y descripciones -->
+          <section class="carrusel">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <!-- Mascota 1 -->
+            <div class="slides">
+              <div class="slide s1">
+                <img src="../IMG/adopta_perro1.jpg" alt="Rocky">
+                <div class="info">
+                  <h2>Rocky</h2>
+                  <p>Cachorro juguetón que ama correr por el parque.</p>
+                </div>
+              </div>
+
+              <!-- Mascota 2 -->
+              <div class="slide s2">
+                <img src="../IMG/Gato.jpg" alt="Luna">
+                <div class="info">
+                  <h2>Luna</h2>
+                  <p>Gatita dulce y tranquila que busca un hogar cálido.</p>
+                </div>
+              </div>
+
+              <!-- Mascota 3 -->
+              <div class="slide s3">
+                <img src="../IMG/Perro1.jpg" alt="Toby">
+                <div class="info">
+                  <h2>Toby</h2>
+                  <p>Perro sociable y fiel, ideal para familias.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botones para navegar entre mascotas -->
+            <div class="navegacion">
+              <label for="slide1" class="bar"></label>
+              <label for="slide2" class="bar"></label>
+              <label for="slide3" class="bar"></label>
+            </div>
+          </section>
+        </div>
+
+        <!-- Botón que te lleva al formulario -->
+        <button class="formulario"><a href="formulario.html">ADOPTA</a></button>
+     </main>
+
+     <!-- Pie de página con los medios de contacto -->
+     <footer>
+        Contacta con nosotros
+        <img src="../IMG/telefono.png" width="40em">
+        <img src="../IMG/email.png" width="40em">
+        <img src="../IMG/ubicacion.png" width="40em">
+     </footer>
+  </body>
+</html>

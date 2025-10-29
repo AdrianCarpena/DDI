@@ -1,0 +1,205 @@
+/* Resetea los márgenes y ajusta el modelo de caja */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estructura base de la página. Define el cuerpo como un contenedor con 3 áreas: header, main y footer */
+body {
+  margin: 2em 5em;
+  width: 90vw;
+  height: 90vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  position: relative; 
+  overflow: hidden; /* evita que el contenido sobresalga del borde */
+}
+
+/* Cabecera fija en la parte superior. Ocupa todo el ancho y se mantiene visible. */
+header {
+  grid-area: header;
+  background-color: aqua;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Botón del menú principal dentro del contenedor. Está fijo y ligeramente separado del header. */
+.menu {
+  position: absolute;
+  top: 130px;
+  left: 25px; 
+  background-color: cornflowerblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  z-index: 10; /* asegura que quede por encima del contenido */
+}
+
+/* Efecto al pasar el ratón por el botón */
+.menu:hover {
+  scale: 1.2;
+  background-color: dodgerblue;
+  transition: ease 1.5s;
+  transition-delay: 0.3s;
+}
+
+/* Estilo del enlace dentro del botón */
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Área principal con desplazamiento interno. Se deja espacio suficiente para no tapar el header ni el footer. */
+main {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 180px 4em 130px; 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  background-color: white;
+  height: 100%;
+}
+
+/* Cada historia se muestra en dos columnas (imagen + texto). */
+.historia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2em;
+  margin-left: 110px; /* desplaza todo un poco a la derecha */
+  width: calc(100% - 110px);
+}
+
+/* Imagen con borde redondeado y tamaño controlado */
+.historia img {
+  width: 95%;
+  border-radius: 10px;
+  border: 2px solid black;
+  max-height: 350px;
+  object-fit: cover; /* mantiene proporciones sin deformarse */
+  justify-self: start;
+}
+
+/* Texto de cada historia, alineado y con márgenes suaves */
+.texto {
+  margin-left: 25px;
+  width: 80%;
+}
+
+/* Pie de página fijo en la parte inferior. Se alinea el texto con los iconos en una sola línea. */
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center; /* centra texto e iconos */
+  align-items: center;
+  gap: 15px;
+}
+
+/* Ajuste del texto del footer */
+footer p {
+  margin: 0;
+}
+
+/* Contenedor para los iconos del footer */
+.iconos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Tamaño y alineación de los iconos */
+footer img {
+  vertical-align: middle;
+  width: 40px;
+}
+
+/* Estilos adaptados para móviles y pequeñas tablets */
+@media (max-width: 700px) {
+  /* Ajusta márgenes y tamaño general */
+  body {
+    margin: 1em;
+    width: auto;
+  }
+
+  /* Cabecera más pequeña y compacta */
+  header {
+    font-size: 2.5em;
+    padding: 15px 0;
+  }
+
+  /* El botón deja de ser fijo y se centra debajo del header */
+  .menu {
+    position: relative; 
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 120px auto 1.5em; /* lo coloca justo bajo el header */
+    display: flex;
+    justify-content: center;
+  }
+
+  /* El contenido usa menos espacio lateral */
+  main {
+    padding: 0 1em 120px; 
+  }
+
+  /* Las historias pasan a una sola columna (imagen sobre texto) */
+  .historia {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .historia img {
+    max-height: 250px;
+  }
+
+  .texto {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .texto h2 {
+    font-size: 1.6em;
+  }
+
+  /* Footer más pequeño y en dos líneas (texto arriba, iconos abajo) */
+  footer {
+    font-size: 1.2em;
+    flex-direction: column; 
+  }
+
+  /* Iconos más pequeños en móvil */
+  .iconos img {
+    width: 30px;
+  }
+}
