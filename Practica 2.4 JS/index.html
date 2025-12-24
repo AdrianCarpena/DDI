@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matrícula DOM2</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+
+</head>
+<body>
+  <main class="card">
+    <h1 id="titulo">Matrícula DOM2</h1>
+
+    <p id="status" aria-live="polite"></p>
+
+    <form id="formMatricula">
+      <label>
+        Nombre y apellidos
+        <input id="nombre" name="nombre" type="text" autocomplete="name" />
+      </label>
+      <small class="msg" id="msgNombre"></small>
+
+      <label>
+        Edad
+        <input id="edad" name="edad" type="number" min="0" />
+      </label>
+      <small class="msg" id="msgEdad"></small>
+
+      <label>
+        Email
+        <input id="email" name="email" type="email" autocomplete="email" />
+      </label>
+      <small class="msg" id="msgEmail"></small>
+
+      <label>
+        Ciclo
+        <select id="ciclo" name="ciclo">
+          <option value="">-- Elige --</option>
+          <option value="DAM">DAM</option>
+          <option value="DAW">DAW</option>
+        </select>
+      </label>
+      <small class="msg" id="msgCiclo"></small>
+
+      <section>
+        <div class="fila">
+          <h2 class="h2">Módulos</h2>
+          <button type="button" id="btnAddModulo"> Añadir módulo</button>
+        </div>
+
+        <div id="mods" class="mods">
+          <!-- checkboxes  -->
+          <label class="mod">
+            <input type="checkbox" name="modulos" value="DOM básico" />
+            DOM básico
+          </label>
+          <label class="mod">
+            <input type="checkbox" name="modulos" value="Eventos" />
+            Eventos
+          </label>
+        </div>
+        <small class="msg" id="msgMods"></small>
+      </section>
+
+      <label>
+        Observaciones
+        <textarea id="obs" name="obs" rows="3"></textarea>
+      </label>
+      <section>
+      <label class="fila">
+        <input id="acepto" type="checkbox" />
+        Acepto condiciones
+      </label>
+      <small class="msg" id="msgAcepto"></small>
+      </section>
+      <div class="botonera">
+        <button id="btnEnviar" type="submit">Enviar</button>
+        <button id="btnReset" type="reset">Limpiar</button>
+        <button type="button" id="btnReload">Recargar (BOM)</button>
+        <button type="button" id="btnDictar">Dictar nombre</button>
+      </div>
+    </form>
+
+    <h2 class="h2">Log</h2>
+    <pre id="log"></pre>
+  </main>
+</body>
+</html>
