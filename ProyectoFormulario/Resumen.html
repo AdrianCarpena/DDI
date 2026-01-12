@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen del Personaje</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Resumen del Jugador y Personaje</h1>
+    <div id="resumen"></div>
+    <button onclick="volver()">Volver</button>
+  </main>
+
+  <script>
+    // Obtener datos de localStorage
+    const datosJSON = localStorage.getItem("resumenPersonaje");
+
+    const resumenDiv = document.getElementById("resumen");
+
+    if (datosJSON) {
+      const datos = JSON.parse(datosJSON);
+      resumenDiv.innerHTML = `
+        <h2>Jugador</h2>
+        <p><strong>Nombre:</strong> ${datos.jugador.nombreJ}</p>
+        <p><strong>Edad:</strong> ${datos.jugador.edad}</p>
+        <p><strong>Email:</strong> ${datos.jugador.email}</p>
+
+        <h2>Personaje</h2>
+        <p><strong>Nombre:</strong> ${datos.personaje.nombreP}</p>
+        <p><strong>Clase:</strong> ${datos.personaje.claseP}</p>
+        <p><strong>Personalidades:</strong> ${datos.personaje.personalidades.join(", ")}</p>
+        <p><strong>Historia:</strong> ${datos.personaje.historia}</p>
+      `;
+    } else {
+      resumenDiv.textContent = "No hay datos para mostrar.";
+    }
+
+    function volver() {
+      window.location.href = "Formulario.html"; // Cambia por el nombre real de tu página de formulario
+    }
+  </script>
+</body>
+</html>

@@ -36,12 +36,7 @@ input, select, textarea, button {
     min-height: 18px; 
     font-size: 12px; 
     }
-.campo-error { 
-    border-color: #ff6b6b; 
-    }
-.campo-ok { 
-    border-color: #33c481; 
-    }
+
 .msg-error { 
     color: #d62323; 
     }

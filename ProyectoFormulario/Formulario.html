@@ -64,7 +64,7 @@
           <option value="Rebelde">Rebelde</option>
           <option value="Habilidoso">Habilidoso</option>
           <option value="Disciplinado">Disciplinado</option>
-          <option value="Escurridizo">Asesino</option>
+          <option value="Escurridizo">Escurridizo</option>
           <option value="Ingenioso">Ingenioso</option>
           <option value="Desconfiado">Desconfiado</option>
           <option value="Arrogante">Arrogante</option>
@@ -75,18 +75,19 @@
           <option value="Colaborador">Colaborador</option>
           <option value="Vengativo">Vengativo</option>
         </select>
-        <ul>
-          <li>Esta se borra</li>
+        <ul id="Personalidades">
         </ul>
+        <div class="botonera">
         <button type="button" id="añadirPersonalidad">Añadir</button>
         <button type="button" id="eliminarPersonalidad">Eliminar</button>
+        </div>
         
       </label>
       <small class="msg" id="msgPersonalidad"></small>
 
       <label>
         Historia del Personaje:
-        <textarea id="HistoriaP" name="HistoriaP" rows="5"></textarea>
+        <textarea id="HistoriaP" name="HistoriaP" rows="5" maxlength="200"></textarea>
       </label>
       <hr>
       <label class="fila">
@@ -102,5 +103,6 @@
       </div>
     </form>
   </main>
+    <script src="Script.js"></script>
 </body>
 </html>
