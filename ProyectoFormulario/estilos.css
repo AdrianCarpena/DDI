@@ -1,18 +1,28 @@
 :root {
-     font-family: system-ui, Arial, sans-serif;
+    font-family: 'Brush Script MT',cursive;
+    font-size: large;
     }
 body { 
     margin: 0; 
     background: #f6f7fb; 
     padding: 24px; 
+    background-image: url("back.jpg");
+    background-attachment: fixed;
+    
     }
+
+    /*tarjeta*/
+
 .card { 
     max-width: 760px; 
     margin: 0 auto; 
-    background: white;
-     padding: 18px; 
-     border-radius: 14px;
-      border: 1px solid #e6e6ee; 
+    background-color: #ececec;
+    padding: 18px; 
+    border-radius: 14px;
+    border: 1px solid #e6e6ee; 
+
+    box-shadow: 5px 5px 50px 15px lightgrey;
+
     }
 label { 
     display: block;
@@ -21,21 +31,59 @@ label {
 input, select, textarea, button { 
     width: 100%;
     padding: 10px;
+    background-color: #cccccc;
     border-radius: 10px; 
     border: 1px solid #d7d7e6; 
     box-sizing: border-box; 
-    }
+    font-family: 'Brush Script MT';
 
+    }
+#acepto {
+    width: auto;
+}
+
+h1 {
+    text-align: center;
+}
 
 .h2 { 
     margin-top: 18px; 
     }
 
+
+    /*botones*/
+
+.botonera {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    width: 200px;
+    
+}
+
+button:hover {
+    background-color: red;
+    font-family: 'Brush Script MT';
+}
+
+    /*mensajes*/
+
 .msg { 
     display: inline-block ; 
     min-height: 18px; 
     font-size: 12px; 
+    font-family: 'Brush Script MT';
     }
+
+/*.campo-error { 
+    border-color: #ff6b6b; 
+    }
+.campo-ok { 
+    border-color: #33c481; 
+    }*/
 
 .msg-error { 
     color: #d62323; 
@@ -43,4 +91,3 @@ input, select, textarea, button {
 .msg-ok { 
     color: #0c7a3c; 
     }
-
