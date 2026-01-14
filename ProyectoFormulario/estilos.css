@@ -1,5 +1,6 @@
 :root {
-    font-family: 'Brush Script MT',cursive;
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS', cursive;
+
     font-size: large;
     }
 body { 
@@ -35,7 +36,8 @@ input, select, textarea, button {
     border-radius: 10px; 
     border: 1px solid #d7d7e6; 
     box-sizing: border-box; 
-    font-family: 'Brush Script MT';
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
+
 
     }
 #acepto {
@@ -61,12 +63,13 @@ h1 {
 
 button {
     width: 200px;
-    
+    transition: font-size 0.5s, background-color 1s;
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
 }
 
 button:hover {
-    background-color: red;
-    font-family: 'Brush Script MT';
+    background-color: rgb(61, 80, 67);
+    font-size: large;
 }
 
     /*mensajes*/
@@ -75,7 +78,8 @@ button:hover {
     display: inline-block ; 
     min-height: 18px; 
     font-size: 12px; 
-    font-family: 'Brush Script MT';
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
+
     }
 
 /*.campo-error { 
