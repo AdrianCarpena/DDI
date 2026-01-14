@@ -1,6 +1,6 @@
 :root {
-    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS', cursive;
-
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting',cursive;
+    font-style: italic;
     font-size: large;
     }
 body { 
