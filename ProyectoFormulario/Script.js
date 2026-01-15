@@ -107,14 +107,14 @@ function validarNombrePersonaje() {
 
 function validarClase() {
   if (clasePersonaje.value === "") {
-    console.warn("Ciclo inválido")
-    msgClase.textContent = "Ciclo inválido";
+    console.warn("Clase inválida")
+    msgClase.textContent = "Clase inválida";
     msgClase.className = "msg msg-error";
     clasePersonaje.className="msg msg-error";
     return false
   }
-  console.log("Ciclo válido")
-  msgClase.textContent = "Ciclo válido";
+  console.log("Clase válida")
+  msgClase.textContent = "Clase válida";
   msgClase.className = "msg msg-ok";
   clasePersonaje.className="msg msg-ok";
   return true
