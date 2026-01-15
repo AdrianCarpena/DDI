@@ -113,7 +113,7 @@ function validarClase() {
     clasePersonaje.className="msg msg-error";
     return false
   }
-  console.log("Clase válida")
+  console.log("Clase válido")
   msgClase.textContent = "Clase válida";
   msgClase.className = "msg msg-ok";
   clasePersonaje.className="msg msg-ok";

@@ -1,5 +1,4 @@
 :root {
-    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting',cursive;
     font-style: italic;
     font-size: large;
     }
@@ -36,7 +35,6 @@ input, select, textarea, button {
     border-radius: 10px; 
     border: 1px solid #d7d7e6; 
     box-sizing: border-box; 
-    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
 
 
     }
@@ -64,7 +62,6 @@ h1 {
 button {
     width: 200px;
     transition: font-size 0.5s, background-color 1s;
-    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
 }
 
 button:hover {
@@ -78,7 +75,6 @@ button:hover {
     display: inline-block ; 
     min-height: 18px; 
     font-size: 12px; 
-    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Comic Sans MS';
 
     }
 
