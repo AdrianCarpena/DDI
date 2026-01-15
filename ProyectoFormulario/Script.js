@@ -46,7 +46,7 @@ acepto.addEventListener("change", () => {
 function validarNombreJugador() {
   if (nombreJ.value.trim().length < 3 || !isNaN(nombreJ.value[0])) {
     console.warn("Nombre inválido");
-    msgNombreJ.textContent = "Nombre inválido";
+    msgNombreJ.textContent = "Nombre inválido (al menos 3 caracteres y que empiece por una letra)";
     msgNombreJ.className = "msg msg-error";
     nombreJ.className="msg msg-error";
     return false
@@ -62,7 +62,7 @@ function validarEdad() {
   const valor = Number(edad.value);
   if (!Number.isInteger(valor) || valor < 12 || valor > 100) {
     console.warn("Edad inválida");
-    msgEdad.textContent = "Edad inválida";
+    msgEdad.textContent = "Edad inválida (12-100 años)";
     msgEdad.className = "msg msg-error";
     edad.className="msg msg-error";
     return false
@@ -78,7 +78,7 @@ function validarEmail() {
   const valor = email.value.trim();
   if (valor.length < 6 || !valor.includes("@") || !valor.includes(".") || valor.toLowerCase().includes("yahoo.")) {
     console.warn("Email inválido");
-    msgEmail.textContent = "Email inválido";
+    msgEmail.textContent = "Email inválido (al menos 6 caracteres, incluyendo @ y .)";
     msgEmail.className = "msg msg-error";
     email.className="msg msg-error";
     return false
@@ -93,8 +93,8 @@ function validarEmail() {
 function validarNombrePersonaje() {
   const valor = nombreP.value.trim();
   if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,}$/.test(valor)){
-    console.warn("El nombre del personaje solo debe tener letras y longitud de al menos 2 caracteres");
-    msgNombreP.textContent = "Nombre inválido";
+    console.warn("Nombre inválido");
+    msgNombreP.textContent = "Nombre inválido (al menos 2 caracteres y solo debe tener letras)";
     msgNombreP.className = "msg msg-error";
     nombreP.className = "msg msg-error";
     return false;
