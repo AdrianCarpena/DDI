@@ -13,6 +13,23 @@
   </main>
 
   <script>
+
+    function escribirPocoAPoco(elemento, texto, velocidad) {
+    let i = 0;
+    elemento.textContent = "";
+
+    function escribir() {
+        elemento.textContent += texto.charAt(i);
+        i++;
+
+        if (i >= texto.length) {
+            clearInterval(intervalo);
+        }
+    }
+
+    const intervalo = setInterval(escribir, velocidad);
+}
+
     // Obtener datos de localStorage
     const datosJSON = localStorage.getItem("resumenPersonaje");
 
@@ -30,14 +47,19 @@
         <p><strong>Nombre:</strong> ${datos.personaje.nombreP}</p>
         <p><strong>Clase:</strong> ${datos.personaje.claseP}</p>
         <p><strong>Personalidades:</strong> ${datos.personaje.personalidades.join(", ")}</p>
-        <p><strong>Historia:</strong> ${datos.personaje.historia}</p>
+        <p><strong>Historia:</strong></p>
+        <p id="historiaAnimada"></p>
       `;
+      //Parte extra para animación de escritura
+      const historiaP = document.getElementById("historiaAnimada");
+      escribirPocoAPoco(historiaP, datos.personaje.historia, 40);
+
     } else {
       resumenDiv.textContent = "No hay datos para mostrar.";
     }
 
     function volver() {
-      window.location.href = "Formulario.html"; 
+      window.location.href = "Formulario.html"; // Cambia por el nombre real de tu página de formulario
     }
   </script>
 </body>
